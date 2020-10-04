@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+{% if latest_product_list %}
+    <ul>
+    {% for product in latest_product_list %}
+        <li><a href="/store/{{ product.id }}/">{{ product.name }} <br>
+        <img src="{{ product.image.url }}" width="200" height="100"> <br>
+        ${{ product.price }} <br>
+    
+        </a></li>
+				
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No product are available.</p>
+{% endif %}
+
+
+</body>
+</html>
