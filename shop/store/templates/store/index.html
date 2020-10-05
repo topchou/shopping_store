@@ -5,6 +5,9 @@
   <title></title>
 </head>
 <body>
+
+{%  extends 'store/main.html' %}
+{% block content %}
 {% if latest_product_list %}
     <ul>
     {% for product in latest_product_list %}
@@ -20,6 +23,6 @@
     <p>No product are available.</p>
 {% endif %}
 
-
+{% endblock  %}
 </body>
 </html>
